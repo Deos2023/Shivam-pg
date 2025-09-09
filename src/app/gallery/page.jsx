@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Gallery() {
   // Generate image paths
-  const images = Array.from({ length: 10 }, (_, i) => `/img/1 (${i + 1}).jpeg`);
+  const images = Array.from({ length: 13 }, (_, i) => `/img/1 (${i + 1}).jpeg`);
   
   // State for lightbox
   const [selectedImage, setSelectedImage] = useState(null);
@@ -214,6 +214,8 @@ export default function Gallery() {
         </div>
       </section>
 
+      
+
       {/* Gallery Grid */}
       <section className="py-12 px-6 md:px-16 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -248,6 +250,22 @@ export default function Gallery() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-12 px-6 md:px-16 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Video</h2>
+          <div className="flex justify-center">
+            <video
+              controls
+              className="rounded-lg shadow-lg w-full max-w-2xl"
+            >
+              <source src="/img/1 (vdo).mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </section>
 
